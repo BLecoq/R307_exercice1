@@ -20,7 +20,7 @@ CREATE TABLE commentaires (
     article_id INT NOT NULL REFERENCES articles(id) ON DELETE CASCADE,
     nom VARCHAR(255) NOT NULL,
     texte TEXT NOT NULL CHECK (length(trim(texte)) > 0),
-    cree_le TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+    cree_le TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 
